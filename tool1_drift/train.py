@@ -19,18 +19,19 @@ def load(pattern, sample=None):
     return X, y
 
 
-# Train on Monday (normal) + Tuesday (first attacks)
-X1, y1 = load("data/*Monday*.csv", sample=100000)
-X2, y2 = load("data/*Tuesday*.csv", sample=100000)
-X = pd.concat([X1, X2])
-y = pd.concat([y1, y2])
+if __name__ == "__main__":
+    # Train on Monday (normal) + Tuesday (first attacks)
+    X1, y1 = load("data/*Monday*.csv", sample=100000)
+    X2, y2 = load("data/*Tuesday*.csv", sample=100000)
+    X = pd.concat([X1, X2])
+    y = pd.concat([y1, y2])
 
-X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.2, random_state=42, stratify=y
-)
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=0.2, random_state=42, stratify=y
+    )
 
-model = XGBClassifier(n_estimators=200, max_depth=6, n_jobs=-1)
-model.fit(X_train, y_train)
+    model = XGBClassifier(n_estimators=200, max_depth=6, n_jobs=-1)
+    model.fit(X_train, y_train)
 
-print(classification_report(y_test, model.predict(X_test)))
-joblib.dump(model, "models/model_v1.joblib")
+    print(classification_report(y_test, model.predict(X_test)))
+    joblib.dump(model, "models/model_v1.joblib")
