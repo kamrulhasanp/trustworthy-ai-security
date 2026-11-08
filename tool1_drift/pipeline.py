@@ -1,3 +1,5 @@
+import sys
+
 import joblib
 import pandas as pd
 import matplotlib
@@ -8,6 +10,11 @@ from xgboost import XGBClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import f1_score, recall_score
 from train import load
+
+# Share of each day used as "recent labeled data". Default 20%.
+# Run with a number to change it, for example: python tool1_drift/pipeline.py 0.05
+SLICE = float(sys.argv[1]) if len(sys.argv) > 1 else 0.2
+TAG = "" if SLICE == 0.2 else f"_slice{int(round(SLICE * 100))}"
 
 SAMPLE = 50000         # rows loaded per day (lower if your Mac is slow)
 DRIFT_SAMPLE = 20000   # rows used for the drift check
@@ -41,6 +48,8 @@ def score(model, X, y):
     }
 
 
+print(f"Labeled slice per day: {SLICE:.0%}")
+
 # Starting point: Monday + Tuesday data and the first model
 X1, y1 = load("data/*Monday*.csv", sample=SAMPLE)
 X2, y2 = load("data/*Tuesday*.csv", sample=SAMPLE)
@@ -56,17 +65,17 @@ rows = []
 for day in ["Wednesday", "Thursday", "Friday"]:
     X, y = load(f"data/*{day}*.csv", sample=SAMPLE)
 
-        # Step 1: label-free drift check
+    # Step 1: label-free drift check
     d = drift_score(ref, X.sample(min(len(X), DRIFT_SAMPLE), random_state=1))
     drift_alert = d > ALERT
 
-    # Split the day: 20% recent labeled data, 20% for the shadow test, 60% final test
+    # Split the day: SLICE = recent labeled data, then 20% for the shadow test, 60% final test
     X_rest, X_new, y_rest, y_new = train_test_split(
-        X, y, test_size=0.2, random_state=42, stratify=y)
+        X, y, test_size=SLICE, random_state=42, stratify=y)
     X_val, X_test, y_val, y_test = train_test_split(
         X_rest, y_rest, test_size=0.75, random_state=42, stratify=y_rest)
 
-        # Step 1b: quick health check on the small labeled slice
+    # Step 1b: quick health check on the small labeled slice
     health = score(active, X_new, y_new)["recall"] if y_new.sum() > 0 else 1.0
     perf_alert = health < MIN_RECALL
     alert = drift_alert or perf_alert
@@ -89,7 +98,7 @@ for day in ["Wednesday", "Thursday", "Friday"]:
         if chall_f1 > champ_f1 + MIN_GAIN:
             active = challenger
             version += 1
-            joblib.dump(active, f"models/pipeline_v{version}.joblib")
+            joblib.dump(active, f"models/pipeline{TAG}_v{version}.joblib")
             promoted = True
             ref = X_hist.sample(DRIFT_SAMPLE, random_state=1)  # new normal
 
@@ -110,11 +119,12 @@ for day in ["Wednesday", "Thursday", "Friday"]:
         "false_alarms_never_updated": never["false_alarms"],
         "false_alarms_pipeline": after["false_alarms"],
         "attacks_in_test": int(y_test.sum()),
+        "attacks_in_labeled_slice": int(y_new.sum()),
     })
     print(rows[-1])
 
 res = pd.DataFrame(rows)
-res.to_csv("docs/pipeline_results.csv", index=False)
+res.to_csv(f"docs/pipeline_results{TAG}.csv", index=False)
 
 # Chart: never updated vs self-updating
 x = range(len(res))
@@ -132,8 +142,8 @@ ax.set_xticks(list(x))
 ax.set_xticklabels(res["day"])
 ax.set_ylim(0, 1.3)
 ax.set_ylabel("Recall (share of attacks caught)")
-ax.set_title("Self-updating pipeline vs a model that is never updated")
+ax.set_title(f"Self-updating pipeline vs never updated ({SLICE:.0%} labeled per day)")
 ax.legend(loc="upper center", ncol=2)
 plt.tight_layout()
-plt.savefig("docs/pipeline_chart.png", dpi=150)
-print("Saved docs/pipeline_results.csv and docs/pipeline_chart.png")
+plt.savefig(f"docs/pipeline_chart{TAG}.png", dpi=150)
+print(f"Saved docs/pipeline_results{TAG}.csv and docs/pipeline_chart{TAG}.png")
