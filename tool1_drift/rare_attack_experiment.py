@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 from xgboost import XGBClassifier
 from sklearn.model_selection import train_test_split
+from scipy.stats import binomtest
 
 SAMPLE = 50000     # must match pipeline.py
 SLICE = 0.2        # labeled share of each day, same as the main results
@@ -84,3 +85,19 @@ print(f"False alarms on normal traffic: plain {int(ben['plain'].sum())}, "
       f"weighted {int(ben['weighted'].sum())} (out of {len(ben)} normal rows)")
 out.to_csv("docs/rare_attack_results.csv", index=False)
 print("Saved docs/rare_attack_results.csv")
+
+
+# 5. Is the difference more than luck? Compare the two models on the same attacks
+
+def paired(sub, label):
+    only_w = int(((sub["plain"] == 0) & (sub["weighted"] == 1)).sum())
+    only_p = int(((sub["plain"] == 1) & (sub["weighted"] == 0)).sum())
+    n = only_w + only_p
+    p = binomtest(only_w, n, 0.5).pvalue if n else float("nan")
+    print(f"{label}: caught only by weighted = {only_w}, only by plain = {only_p}, p-value = {p:.4f}")
+
+
+paired(att, "All attacks")
+bot_name = [t for t in att["type"].unique() if str(t).strip().lower() == "bot"]
+if bot_name:
+    paired(att[att["type"] == bot_name[0]], "Bot only")
