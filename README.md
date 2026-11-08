@@ -1,5 +1,7 @@
 # Trustworthy AI Security Suite
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.8475)
+
 Free, open tools that keep AI-based cloud security accurate, fair, and hard to trick.
 This project is built in 12 weeks on a laptop with no GPU.
 
