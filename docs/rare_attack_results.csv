@@ -1,0 +1,11 @@
+type,attacks,caught_plain,caught_weighted,recall_plain,recall_weighted
+Infiltration,2,1,0,0.5,0.0
+Web Attack � XSS,41,37,39,0.902,0.951
+Bot,76,51,55,0.671,0.724
+Web Attack � Brute Force,93,88,93,0.946,1.0
+DoS slowloris,252,251,251,0.996,0.996
+DoS Slowhttptest,265,260,265,0.981,1.0
+DoS GoldenEye,426,423,422,0.993,0.991
+DDoS,5521,5510,5510,0.998,0.998
+PortScan,6743,6731,6734,0.998,0.999
+DoS Hulk,9969,9948,9953,0.998,0.998
