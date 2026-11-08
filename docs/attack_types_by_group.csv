@@ -1,0 +1,17 @@
+group,attack_type,attacks,missed,missed_share
+DNS,PortScan,8,0,0.0
+File and mail,PortScan,52,2,0.038
+Other,Bot,18,7,0.389
+Other,DDoS,1,1,1.0
+Other,Infiltration,2,1,0.5
+Other,PortScan,6628,10,0.002
+Remote login,PortScan,25,0,0.0
+Web,Bot,58,18,0.31
+Web,DDoS,5520,10,0.002
+Web,DoS GoldenEye,426,3,0.007
+Web,DoS Hulk,9969,21,0.002
+Web,DoS Slowhttptest,265,5,0.019
+Web,DoS slowloris,252,1,0.004
+Web,PortScan,30,0,0.0
+Web,Web Attack � Brute Force,93,5,0.054
+Web,Web Attack � XSS,41,4,0.098
