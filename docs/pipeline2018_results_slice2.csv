@@ -1,0 +1,6 @@
+day,attack_types,drift_score,drift_alert,perf_alert,health_recall,promoted,recall_never_updated,recall_pipeline_before,recall_pipeline,false_alarms_never_updated,false_alarms_pipeline,attacks_in_test,attacks_in_labeled_slice
+Thu 15-02,DoS attacks-GoldenEye; DoS attacks-Slowloris,0.526,True,True,0.0,True,0.0,0.0,0.998,0,14,11060,301
+Fri 16-02,DoS attacks-Hulk; DoS attacks-SlowHTTPTest,0.692,True,False,0.998,False,0.232,0.998,0.998,0,12,126457,3441
+Wed 21-02,DDOS attack-HOIC; DDOS attack-LOIC-UDP,0.718,True,True,0.0,True,0.0,0.0,0.999,4,5,144586,3934
+Thu 22-02,Brute Force -Web; Brute Force -XSS; SQL Injection,0.628,True,True,0.0,True,0.0,0.0,0.145,8,11,76,2
+Fri 02-03,Bot,0.641,True,True,0.0,True,0.0,0.0,0.999,0,2,60340,1642

@@ -31,6 +31,20 @@ A threat detector trained on old attacks quietly fails when new attack types app
 
 Share of attacks caught (recall). Charts are in `docs/`.
 
+## Second dataset check (CSE-CIC-IDS2018)
+Same method and same settings as the first dataset, with no tuning. First model trained on Wed 14-02 (FTP and SSH brute force), then five later days. Share of attacks caught:
+
+| Day | Attacks in test | Never updated | Self-updating pipeline |
+|---|---|---|---|
+| Thu 15-02 (DoS) | 9,028 | 0% | about 100% |
+| Fri 16-02 (DoS) | 103,230 | 23% | 99.8% |
+| Wed 21-02 (DDoS) | 118,029 | 0% | about 100% |
+| Thu 22-02 (web attacks) | 61 | 0% | 41% |
+| Fri 02-03 (Bot) | 49,257 | 0% | about 100% |
+
+The self-updating pipeline worked on four of five days. It struggled on the day with very few attacks (61 in the test, 21 labeled), the same weakness seen on the first dataset.
+Data: CSE-CIC-IDS2018 (registry.opendata.aws/cse-cic-ids2018). Same citation as above.
+
 ## Limits
 - One dataset only.
 - Test data comes from the same day as the update data, so scores are best-case.
