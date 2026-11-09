@@ -6,9 +6,9 @@ Free, open tools that keep AI-based cloud security accurate, fair, and hard to t
 This project is built in 12 weeks on a laptop with no GPU.
 
 ## Status
-- Tool 1: Self-updating threat detector (first version released, v0.1.0)
-- Tool 2: Fairness checker (next)
-- Tool 3: Early warning system (planned)
+- Tool 1: Self-updating threat detector (released, v0.1.0)
+- Tool 2: Fairness check (first version done)
+- Tool 3: Early warning system (next)
 - Tool 4: Harmful content detector (planned)
 - Tool 5: Attack test kit (planned)
 

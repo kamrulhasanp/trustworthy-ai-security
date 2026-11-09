@@ -9,3 +9,5 @@
 2026-11-08 | Smaller labeled slices. Pipeline recall at 20% / 5% / 2%: Wed 99.7 / 98.4 / 96.0, Thu 94.1 / 83.4 / 74.3, Fri 99.6 / 99.1 / 99.1. Thursday's labeled slice had only 11 and 5 attacks. Limit is attack examples, not the percentage. Drift check fired on Thursday this time (0.244, 0.218) but health check fired every day. Files: docs/pipeline_results_slice5.csv, slice2.csv, charts.
 
 2026-11-08 | Rare-attack weighting (inverse sqrt frequency, cap 10). Missed attacks 88 to 66 of 23,388; false alarms 99 to 102. Bot 67.1% to 72.4% (51 to 55 of 76, ranges overlap, still weakest). Brute Force 94.6% to 100%. Some gains also in common types, so partly ordinary variation. File: docs/rare_attack_results.csv
+
+2026-11-08 | Paired check on rare-attack weighting: 35 attacks caught only by weighted, 13 only by plain (p=0.002, probably optimistic since flows are correlated). Bot only: 7 vs 3 (p=0.34, not clear). Weighting helps overall; Bot still weakest. Progress report v2 written (Tool 1 and Tool 2).
