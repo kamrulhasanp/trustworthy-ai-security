@@ -13,3 +13,5 @@
 2026-11-08 | Paired check on rare-attack weighting: 35 attacks caught only by weighted, 13 only by plain (p=0.002, probably optimistic since flows are correlated). Bot only: 7 vs 3 (p=0.34, not clear). Weighting helps overall; Bot still weakest. Progress report v2 written (Tool 1 and Tool 2).
 
 2026-11-08 | Second dataset CSE-CIC-IDS2018, settings frozen from 2017. Pipeline vs never updated: Thu 15-02 100% vs 0%, Fri 16-02 99.8% vs 23% (no switch, shadow test blocked it), Wed 21-02 100% vs 0%, Thu 22-02 41% vs 0% (web attacks, 61 test attacks, 21 labeled), Fri 02-03 100% vs 0% (Bot, 16,419 labeled examples). Traffic-shape alarm fired every day; health check fired only when needed. Weak spot: rare web attacks.
+
+2026-11-09 | Second dataset (CSE-CIC-IDS2018), 20% / 5% / 2% labeled. Pipeline recall: Thu 15-02 100/99.9/99.8, Fri 16-02 99.8/99.8/99.8 (no switch), Wed 21-02 100/100/99.9, Thu 22-02 web attacks 41/18/14 (21/5/2 attacks in slice, test only 61-76 attacks), Fri 02-03 Bot 100/100/99.9. Works when the labeled slice holds hundreds of attacks; fails on very few. Note 2% = about 6,000 rows here. Report updated (14 pages).

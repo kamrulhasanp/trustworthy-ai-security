@@ -32,18 +32,18 @@ A threat detector trained on old attacks quietly fails when new attack types app
 Share of attacks caught (recall). Charts are in `docs/`.
 
 ## Second dataset check (CSE-CIC-IDS2018)
-Same method and same settings as the first dataset, with no tuning. First model trained on Wed 14-02 (FTP and SSH brute force), then five later days. Share of attacks caught:
+Same method and same settings as the first dataset, with no tuning afterwards. First model trained on Wed 14-02 (FTP and SSH brute force), then five later days. Share of attacks caught by the self-updating pipeline (a never-updated model caught 0% on four days and 23% on one):
 
-| Day | Attacks in test | Never updated | Self-updating pipeline |
-|---|---|---|---|
-| Thu 15-02 (DoS) | 9,028 | 0% | about 100% |
-| Fri 16-02 (DoS) | 103,230 | 23% | 99.8% |
-| Wed 21-02 (DDoS) | 118,029 | 0% | about 100% |
-| Thu 22-02 (web attacks) | 61 | 0% | 41% |
-| Fri 02-03 (Bot) | 49,257 | 0% | about 100% |
+| Day | 20% labeled | 5% labeled | 2% labeled | Attacks in labeled slice (20% / 5% / 2%) |
+|---|---|---|---|---|
+| Thu 15-02 (DoS) | about 100% | 99.9% | 99.8% | 3,010 / 752 / 301 |
+| Fri 16-02 (DoS) | 99.8% | 99.8% | 99.8% | 34,410 / 8,602 / 3,441 |
+| Wed 21-02 (DDoS) | about 100% | about 100% | 99.9% | 39,343 / 9,836 / 3,934 |
+| Thu 22-02 (web attacks) | 41% | 18% | 14% | 21 / 5 / 2 |
+| Fri 02-03 (Bot) | about 100% | about 100% | 99.9% | 16,419 / 4,105 / 1,642 |
 
-The self-updating pipeline worked on four of five days. It struggled on the day with very few attacks (61 in the test, 21 labeled), the same weakness seen on the first dataset.
-Data: CSE-CIC-IDS2018 (registry.opendata.aws/cse-cic-ids2018). Same citation as above.
+The pipeline worked on four of five days, even with 2% labeled. It failed on the web attack day, which had only 2 to 21 labeled attacks (and only 61 to 76 in the test). Rare new attack types with few examples are the weak spot on both datasets.
+Data: CSE-CIC-IDS2018 (registry.opendata.aws/cse-cic-ids2018), same citation as above.
 
 ## Limits
 - One dataset only.
