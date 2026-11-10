@@ -36,6 +36,18 @@ Traffic is grouped into 10-second windows. A model trained on the other four day
 Early detection works for floods and fails on quiet attacks. This is early detection, not prediction.
 Note: this dataset's timestamps use a 12-hour clock with no AM/PM. The script corrects this, and a check script (`check_timestamps.py`) is included.
 
+### Adaptive early warning
+An analyst labels the day from the start until 15 minutes after the first attack begins. The model learns from that, and is tested only on what comes after.
+
+| Day | Before | After labeling |
+|---|---|---|
+| Fri 02-03 (Bot) | 2% of attack windows flagged | 75% |
+| Wed 21-02 (LOIC-UDP and HOIC) | 66% | 95% |
+| Thu 15-02 (GoldenEye, Slowloris) | 16% | 23% |
+| Wed 14-02, Fri 16-02 | about 99% to 100% | no change |
+
+Labeling helps track a quiet attack that is already under way. It cannot help catch the first minutes of an attack. Results are from five days of one dataset.
+
 ## Results (CIC-IDS2017)
 | Day | Never updated | Self-updating pipeline |
 |---|---|---|
