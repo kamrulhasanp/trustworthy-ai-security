@@ -8,8 +8,8 @@ This project is built in 12 weeks on a laptop with no GPU.
 ## Status
 - Tool 1: Self-updating threat detector (released, v0.1.0)
 - Tool 2: Fairness check (first version done)
-- Tool 3: Early warning system (next)
-- Tool 4: Harmful content detector (planned)
+- Tool 3: Early warning system (done)
+- Tool 4: Harmful content detector (next)
 - Tool 5: Attack test kit (planned)
 
 ## Tool 1: the problem
@@ -21,6 +21,20 @@ A threat detector trained on old attacks quietly fails when new attack types app
 3. If either check raises an alert, trains a new model.
 4. Tests the old and new models side by side.
 5. Switches only if the new one is clearly better, and logs every decision.
+
+## Tool 3: Early warning (CSE-CIC-IDS2018)
+Traffic is grouped into 10-second windows. A model trained on the other four days scores each window, and an alarm fires when two windows in a row score high. Every attack type was new to the model.
+
+| Result | Number |
+|---|---|
+| Attack periods alarmed within 50 seconds of starting | 9 of 11 |
+| Missed | 1 (LOIC-UDP, only 1,730 attack flows) |
+| Late | Bot: alarm after 33 minutes, only 2% of its windows flagged |
+| False alarms | 3 on one day, 0 on the others |
+| Advance warning before attacks start | None found (AUC 0.45 to 0.62, from 3 to 24 windows per day) |
+
+Early detection works for floods and fails on quiet attacks. This is early detection, not prediction.
+Note: this dataset's timestamps use a 12-hour clock with no AM/PM. The script corrects this, and a check script (`check_timestamps.py`) is included.
 
 ## Results (CIC-IDS2017)
 | Day | Never updated | Self-updating pipeline |
