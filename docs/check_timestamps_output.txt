@@ -1,0 +1,18 @@
+
+Friday-16-02: 1,048,574 rows
+Sample timestamps (one every 100,000 rows): ['16/02/2018 08:27:23', '16/02/2018 01:45:29', '16/02/2018 01:45:49', '16/02/2018 01:46:08', '16/02/2018 01:46:29', '16/02/2018 01:46:55', '16/02/2018 01:47:12', '16/02/2018 01:47:38', '16/02/2018 01:47:56', '16/02/2018 01:48:18', '16/02/2018 08:30:12']
+  dayfirst=True: cannot read 0.0%, on 2018-02-16: 100.0%
+   most common dates: {'2018-02-16': 1048574}
+  dayfirst=False: cannot read 0.0%, on 2018-02-16: 100.0%
+   most common dates: {'2018-02-16': 1048574}
+  rows per hour of the day (dayfirst=True): {1: 908339, 8: 50, 9: 111, 10: 139984, 11: 37, 12: 53}
+  label counts: {'DoS attacks-Hulk': 461912, 'Benign': 446772, 'DoS attacks-SlowHTTPTest': 139890}
+
+Wednesday-21-02: 1,048,575 rows
+Sample timestamps (one every 100,000 rows): ['21/02/2018 08:33:25', '21/02/2018 02:13:13', '21/02/2018 02:15:18', '21/02/2018 02:17:23', '21/02/2018 02:19:28', '21/02/2018 02:21:33', '21/02/2018 02:23:39', '21/02/2018 02:25:44', '21/02/2018 02:27:49', '21/02/2018 02:30:00', '21/02/2018 02:32:20']
+  dayfirst=True: cannot read 0.0%, on 2018-02-21: 100.0%
+   most common dates: {'2018-02-21': 1048575}
+  dayfirst=False: cannot read 0.0%, on 2018-02-21: 100.0%
+   most common dates: {'2018-02-21': 1048575}
+  rows per hour of the day (dayfirst=True): {1: 25, 2: 1044680, 8: 145, 9: 281, 10: 3444}
+  label counts: {'DDOS attack-HOIC': 686012, 'Benign': 360833, 'DDOS attack-LOIC-UDP': 1730}
