@@ -1,0 +1,19 @@
+Analyst labels the day from the start until 15 minutes after the first attack begins. New-day windows get weight 20.
+
+Per day (tested only on what comes after the labeled part):
+      day  labeled_until_hour  attack_windows_labeled  attack_windows_tested  recall_base  recall_adapted  false_alarms_base  false_alarms_adapted  calm_hours_tested
+Wed 14-02               10.81                      90                   1040        0.994           0.996                  0                     0                3.8
+Thu 15-02                9.71                      40                    299        0.161           0.227                  2                     0                7.3
+Fri 16-02               10.45                      90                    207        1.000           1.000                  0                     0                0.3
+Wed 21-02               10.40                      55                    204        0.657           0.951                  0                     0                0.1
+Fri 02-03               10.48                      90                   1952        0.023           0.752                  0                     1                1.6
+
+Attack periods that start after the labeled part (seconds from start to alarm):
+      day  starts_at_hour  length_s base adapted
+Wed 14-02           14.02      5480 50 s    50 s
+Thu 15-02            9.82       480 20 s    20 s
+Thu 15-02           11.00      2510 20 s    20 s
+Fri 16-02           13.76       210 20 s    20 s
+Wed 21-02           14.18      1350 30 s    30 s
+
+Saved docs/adaptive_results.csv, docs/adaptive_episodes.csv, docs/adaptive_chart.png

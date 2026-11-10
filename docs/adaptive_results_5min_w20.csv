@@ -1,0 +1,6 @@
+day,labeled_until_hour,attack_windows_labeled,attack_windows_tested,recall_base,recall_adapted,false_alarms_base,false_alarms_adapted,calm_hours_tested
+Wed 14-02,10.64,30,1100,0.995,0.995,0,0,3.8
+Thu 15-02,9.54,22,317,0.192,0.265,2,0,7.4
+Fri 16-02,10.29,30,267,1.0,1.0,0,0,0.3
+Wed 21-02,10.23,20,239,0.561,0.975,0,0,0.1
+Fri 02-03,10.31,30,2012,0.022,0.024,0,0,1.6
