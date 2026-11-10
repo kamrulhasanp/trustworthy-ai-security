@@ -1,0 +1,27 @@
+
+=== en ===
+rows: 5647 | columns: ['HITId', 'tweet', 'sentiment', 'directness', 'annotator_sentiment', 'target', 'group']
+empty tweets: 0 | exact duplicate tweets: 54 | median length (characters): 55
+sentiment: 48 different values. Most common: {'offensive': 2954, 'normal': 661, 'hateful': 315, 'offensive_hateful': 252, 'offensive_disrespectful': 145, 'abusive_offensive': 115, 'offensive_normal': 114, 'hateful_disrespectful': 96}
+directness: 2 different values. Most common: {'indirect': 5078, 'direct': 569}
+target: 6 different values. Most common: {'origin': 2448, 'disability': 1089, 'other': 890, 'gender': 638, 'sexual_orientation': 514, 'religion': 68}
+group: 16 different values. Most common: {'other': 1590, 'special_needs': 1571, 'women': 878, 'individual': 497, 'left_wing_people': 177, 'refugees': 171, 'gay': 163, 'immigrants': 130}
+share of rows whose sentiment is exactly 'normal': 11.7%
+
+=== fr ===
+rows: 4014 | columns: ['HITId', 'tweet', 'sentiment', 'directness', 'annotator_sentiment', 'target', 'group']
+empty tweets: 0 | exact duplicate tweets: 8 | median length (characters): 90
+sentiment: 69 different values. Most common: {'offensive': 1336, 'normal': 821, 'abusive': 594, 'fearful': 236, 'hateful': 207, 'disrespectful': 142, 'abusive_offensive': 115, 'abusive_normal': 88}
+directness: 2 different values. Most common: {'direct': 2624, 'indirect': 1390}
+target: 6 different values. Most common: {'origin': 2266, 'other': 1386, 'disability': 177, 'religion': 146, 'gender': 27, 'sexual_orientation': 12}
+group: 16 different values. Most common: {'other': 1085, 'individual': 918, 'left_wing_people': 383, 'indian/hindu': 329, 'african_descent': 311, 'arabs': 298, 'special_needs': 174, 'immigrants': 105}
+share of rows whose sentiment is exactly 'normal': 20.5%
+
+=== ar ===
+rows: 3353 | columns: ['HITId', 'tweet', 'sentiment', 'directness', 'annotator_sentiment', 'target', 'group']
+empty tweets: 0 | exact duplicate tweets: 1 | median length (characters): 68
+sentiment: 37 different values. Most common: {'offensive': 950, 'normal': 915, 'hateful': 460, 'abusive_disrespectful': 205, 'abusive_hateful': 168, 'disrespectful': 167, 'disrespectful_normal': 103, 'abusive_normal': 81}
+directness: 2 different values. Most common: {'indirect': 1933, 'direct': 1420}
+target: 5 different values. Most common: {'other': 1782, 'origin': 877, 'gender': 548, 'religion': 145, 'disability': 1}
+group: 14 different values. Most common: {'other': 1470, 'individual': 915, 'women': 722, 'arabs': 52, 'refugees': 52, 'african_descent': 51, 'muslims': 38, 'indian/hindu': 24}
+share of rows whose sentiment is exactly 'normal': 27.3%
