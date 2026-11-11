@@ -1,0 +1,53 @@
+All Arabic tweets, by group: how many, share toxic, share direct, share with target 'gender'
+     group  tweets  toxic_share  direct_share  target_gender_share
+     women     722        0.597         0.359                0.598
+individual     914        0.841         0.575                0.074
+     other    1470        0.751         0.363                0.031
+
+--- Toxic test tweets about 'women': 89, caught 34.8% ---
+By directness:
+            tweets  caught
+directness                
+direct          41   0.366
+indirect        48   0.333
+By hostility label (six most common):
+                                                tweets  caught
+sentiment                                                     
+offensive                                           50   0.360
+disrespectful_normal                                13   0.385
+abusive_normal                                       6   0.000
+abusive_disrespectful                                4   0.500
+abusive_offensive_hateful_disrespectful_normal       2   0.000
+disrespectful                                        2   0.500
+
+--- Toxic test tweets about 'individual': 166, caught 92.2% ---
+By directness:
+            tweets  caught
+directness                
+direct         100   0.940
+indirect        66   0.894
+By hostility label (six most common):
+                       tweets  caught
+sentiment                            
+offensive                  69   0.899
+hateful                    40   0.950
+disrespectful              14   1.000
+abusive_hateful            11   1.000
+abusive_disrespectful       8   1.000
+abusive_offensive           5   1.000
+
+--- Toxic test tweets about 'other': 205, caught 88.8% ---
+By directness:
+            tweets  caught
+directness                
+direct          85   0.906
+indirect       120   0.875
+By hostility label (six most common):
+                       tweets  caught
+sentiment                            
+offensive                  77   0.805
+hateful                    57   1.000
+abusive_hateful            24   0.917
+abusive_disrespectful      19   0.842
+disrespectful               6   1.000
+abusive_offensive           4   1.000
