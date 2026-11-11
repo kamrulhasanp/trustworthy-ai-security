@@ -4,3 +4,4 @@ data/
 __pycache__/
 data2018/
 data_text/
+.venv_nlp/

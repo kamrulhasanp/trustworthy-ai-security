@@ -1,0 +1,71 @@
+English: 5593 tweets | any_toxic 88% | severe 28%
+French: 4006 tweets | any_toxic 80% | severe 34%
+Arabic: 3352 tweets | any_toxic 73% | severe 34%
+
+=== Task: any_toxic ===
+Same language (compare macro F1 with the 'always yes' column; AUC 0.5 means no skill):
+tested_on  n_test  positive_share  macro_f1  always_yes_macro_f1   auc  positives_caught  negatives_left_alone  auc_low  auc_high
+  English    1119           0.882     0.541                0.469 0.600             0.855                 0.242    0.553     0.651
+   French     802           0.796     0.615                0.443 0.721             0.796                 0.457    0.680     0.762
+   Arabic     671           0.727     0.694                0.421 0.775             0.779                 0.639    0.743     0.811
+
+AUC when trained on one language (or all) and tested on another:
+           English  French  Arabic
+English      0.600   0.530   0.566
+French       0.500   0.721   0.400
+Arabic       0.574   0.514   0.775
+All three    0.604   0.710   0.775
+
+Share of positive tweets caught, by target group (same-language model):
+language            group  positive_tweets  caught   low  high
+ English              gay               31   0.935 0.793 0.982
+ English       immigrants               28   0.714 0.529 0.847
+ English     indian/hindu               20   0.950 0.764 0.991
+ English       individual               95   0.821 0.732 0.885
+ English left_wing_people               36   0.889 0.747 0.956
+ English            other              269   0.848 0.800 0.886
+ English         refugees               29   0.655 0.473 0.801
+ English    special_needs              283   0.862 0.817 0.898
+ English            women              132   0.924 0.866 0.958
+  French  african_descent               56   0.786 0.662 0.873
+  French            arabs               52   0.865 0.747 0.933
+  French     indian/hindu               44   0.795 0.655 0.888
+  French       individual              178   0.865 0.807 0.908
+  French left_wing_people               73   0.767 0.658 0.849
+  French            other              117   0.795 0.713 0.858
+  French    special_needs               36   0.944 0.819 0.985
+  Arabic       individual              166   0.922 0.871 0.954
+  Arabic            other              205   0.888 0.837 0.924
+  Arabic            women               89   0.348 0.257 0.452
+
+=== Task: severe ===
+Same language (compare macro F1 with the 'always yes' column; AUC 0.5 means no skill):
+tested_on  n_test  positive_share  macro_f1  always_yes_macro_f1   auc  positives_caught  negatives_left_alone  auc_low  auc_high
+  English    1119           0.279     0.513                0.218 0.521             0.346                 0.683    0.484     0.556
+   French     802           0.323     0.583                0.244 0.619             0.483                 0.691    0.578     0.660
+   Arabic     671           0.334     0.679                0.250 0.747             0.665                 0.718    0.706     0.781
+
+AUC when trained on one language (or all) and tested on another:
+           English  French  Arabic
+English      0.521   0.533   0.398
+French       0.505   0.619   0.380
+Arabic       0.498   0.412   0.747
+All three    0.533   0.607   0.736
+
+Share of positive tweets caught, by target group (same-language model):
+language            group  positive_tweets  caught   low  high
+ English       individual               31   0.355 0.211 0.531
+ English            other               86   0.337 0.246 0.442
+ English    special_needs               91   0.308 0.222 0.409
+ English            women               37   0.432 0.287 0.591
+  French  african_descent               29   0.414 0.255 0.593
+  French            arabs               27   0.481 0.307 0.660
+  French     indian/hindu               32   0.469 0.309 0.636
+  French       individual               40   0.500 0.352 0.648
+  French left_wing_people               22   0.500 0.307 0.693
+  French            other               59   0.475 0.353 0.600
+  Arabic       individual               73   0.767 0.658 0.849
+  Arabic            other              113   0.752 0.665 0.823
+  Arabic            women               22   0.000 0.000 0.149
+
+Saved docs/tool4_v2_results.csv, docs/tool4_v2_group_recall.csv, docs/tool4_v2_chart.png
