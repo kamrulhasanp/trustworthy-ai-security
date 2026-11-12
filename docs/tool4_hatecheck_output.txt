@@ -1,0 +1,83 @@
+W1111 11:22:19.900000 45286 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+English: 3728 HateCheck cases | 2563 hateful | 315 non-hateful statements that mention a group | target groups: ['black people', 'disabled people', 'gay people', 'immigrants', 'muslims', 'trans people', 'women']
+French: 2929 HateCheck cases | 2491 hateful | 196 non-hateful statements that mention a group | target groups: ['black people', 'disabled people', 'gay people', 'muslims', 'refugees', 'trans people', 'women']
+Arabic: 3325 HateCheck cases | 2365 hateful | 329 non-hateful statements that mention a group | target groups: ['black people', 'disabled people', 'gay people', 'immigrants', 'jews', 'trans people', 'women']
+Loading sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2...
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 7253.24it/s]
+Embedding 3728 texts...
+Batches:   0%|          | 0/59 [00:00<?, ?it/s]Batches:   2%|▏         | 1/59 [00:00<00:33,  1.75it/s]Batches:   5%|▌         | 3/59 [00:00<00:10,  5.10it/s]Batches:   8%|▊         | 5/59 [00:00<00:07,  7.34it/s]Batches:  12%|█▏        | 7/59 [00:01<00:05,  8.71it/s]Batches:  15%|█▌        | 9/59 [00:01<00:04, 10.07it/s]Batches:  19%|█▊        | 11/59 [00:01<00:04, 11.28it/s]Batches:  22%|██▏       | 13/59 [00:01<00:03, 12.41it/s]Batches:  25%|██▌       | 15/59 [00:01<00:03, 13.18it/s]Batches:  29%|██▉       | 17/59 [00:01<00:03, 13.81it/s]Batches:  32%|███▏      | 19/59 [00:01<00:02, 14.39it/s]Batches:  36%|███▌      | 21/59 [00:01<00:02, 14.84it/s]Batches:  39%|███▉      | 23/59 [00:02<00:02, 15.18it/s]Batches:  42%|████▏     | 25/59 [00:02<00:02, 15.67it/s]Batches:  46%|████▌     | 27/59 [00:02<00:02, 15.95it/s]Batches:  49%|████▉     | 29/59 [00:02<00:01, 15.97it/s]Batches:  53%|█████▎    | 31/59 [00:02<00:01, 16.34it/s]Batches:  56%|█████▌    | 33/59 [00:02<00:01, 16.24it/s]Batches:  59%|█████▉    | 35/59 [00:02<00:01, 16.92it/s]Batches:  63%|██████▎   | 37/59 [00:02<00:01, 17.51it/s]Batches:  68%|██████▊   | 40/59 [00:03<00:01, 18.67it/s]Batches:  73%|███████▎  | 43/59 [00:03<00:00, 19.59it/s]Batches:  78%|███████▊  | 46/59 [00:03<00:00, 20.33it/s]Batches:  83%|████████▎ | 49/59 [00:03<00:00, 21.52it/s]Batches:  88%|████████▊ | 52/59 [00:03<00:00, 22.44it/s]Batches:  93%|█████████▎| 55/59 [00:03<00:00, 23.51it/s]Batches:  98%|█████████▊| 58/59 [00:03<00:00, 24.73it/s]Batches: 100%|██████████| 59/59 [00:05<00:00, 11.74it/s]
+Embedding 2929 texts...
+Batches:   0%|          | 0/46 [00:00<?, ?it/s]Batches:   2%|▏         | 1/46 [00:00<00:04,  9.92it/s]Batches:   7%|▋         | 3/46 [00:00<00:03, 10.93it/s]Batches:  11%|█         | 5/46 [00:00<00:04,  9.29it/s]Batches:  15%|█▌        | 7/46 [00:00<00:04,  9.71it/s]Batches:  20%|█▉        | 9/46 [00:00<00:03, 10.42it/s]Batches:  24%|██▍       | 11/46 [00:01<00:03,  9.31it/s]Batches:  26%|██▌       | 12/46 [00:01<00:04,  7.14it/s]Batches:  28%|██▊       | 13/46 [00:01<00:04,  7.23it/s]Batches:  33%|███▎      | 15/46 [00:01<00:03,  8.36it/s]Batches:  37%|███▋      | 17/46 [00:01<00:03,  9.35it/s]Batches:  41%|████▏     | 19/46 [00:02<00:02, 10.41it/s]Batches:  46%|████▌     | 21/46 [00:02<00:02, 10.97it/s]Batches:  50%|█████     | 23/46 [00:02<00:01, 11.55it/s]Batches:  54%|█████▍    | 25/46 [00:02<00:01, 11.81it/s]Batches:  59%|█████▊    | 27/46 [00:02<00:01, 12.71it/s]Batches:  63%|██████▎   | 29/46 [00:02<00:01, 13.35it/s]Batches:  67%|██████▋   | 31/46 [00:02<00:01, 13.97it/s]Batches:  72%|███████▏  | 33/46 [00:03<00:00, 14.74it/s]Batches:  76%|███████▌  | 35/46 [00:03<00:00, 15.87it/s]Batches:  80%|████████  | 37/46 [00:03<00:00, 16.04it/s]Batches:  85%|████████▍ | 39/46 [00:03<00:00, 16.29it/s]Batches:  89%|████████▉ | 41/46 [00:03<00:00, 16.95it/s]Batches:  93%|█████████▎| 43/46 [00:03<00:00, 17.73it/s]Batches: 100%|██████████| 46/46 [00:03<00:00, 12.57it/s]Batches: 100%|██████████| 46/46 [00:03<00:00, 11.71it/s]
+Embedding 3325 texts...
+Batches:   0%|          | 0/52 [00:00<?, ?it/s]Batches:   4%|▍         | 2/52 [00:00<00:03, 15.52it/s]Batches:   8%|▊         | 4/52 [00:00<00:02, 16.33it/s]Batches:  12%|█▏        | 6/52 [00:00<00:02, 15.34it/s]Batches:  15%|█▌        | 8/52 [00:00<00:03, 13.31it/s]Batches:  19%|█▉        | 10/52 [00:00<00:03, 11.94it/s]Batches:  23%|██▎       | 12/52 [00:00<00:03, 10.53it/s]Batches:  27%|██▋       | 14/52 [00:01<00:03, 10.97it/s]Batches:  31%|███       | 16/52 [00:01<00:02, 12.40it/s]Batches:  35%|███▍      | 18/52 [00:01<00:02, 13.33it/s]Batches:  38%|███▊      | 20/52 [00:01<00:02, 13.73it/s]Batches:  42%|████▏     | 22/52 [00:01<00:02, 12.96it/s]Batches:  46%|████▌     | 24/52 [00:01<00:02, 11.40it/s]Batches:  50%|█████     | 26/52 [00:02<00:02, 12.41it/s]Batches:  54%|█████▍    | 28/52 [00:02<00:01, 13.44it/s]Batches:  58%|█████▊    | 30/52 [00:02<00:01, 14.27it/s]Batches:  62%|██████▏   | 32/52 [00:02<00:01, 13.90it/s]Batches:  65%|██████▌   | 34/52 [00:02<00:01, 13.47it/s]Batches:  69%|██████▉   | 36/52 [00:02<00:01, 13.95it/s]Batches:  73%|███████▎  | 38/52 [00:02<00:00, 15.30it/s]Batches:  77%|███████▋  | 40/52 [00:02<00:00, 16.30it/s]Batches:  83%|████████▎ | 43/52 [00:03<00:00, 17.44it/s]Batches:  88%|████████▊ | 46/52 [00:03<00:00, 18.73it/s]Batches:  94%|█████████▍| 49/52 [00:03<00:00, 20.65it/s]Batches: 100%|██████████| 52/52 [00:03<00:00, 17.76it/s]Batches: 100%|██████████| 52/52 [00:03<00:00, 14.51it/s]
+
+Overall (share flagged as toxic or severe). Ideal: high on hateful cases, low on non-hateful and identity statements.
+     task                      model language  hateful_cases  hateful_flagged  nonhateful_cases  nonhateful_flagged  identity_statements  identity_flagged  identity_low  identity_high
+any_toxic  wordcount (same language)  English           2563            0.861              1165               0.796                  315             0.721         0.669          0.767
+any_toxic embeddings (same language)  English           2563            0.165              1165               0.178                  315             0.098         0.070          0.136
+any_toxic     embeddings (all three)  English           2563            0.284              1165               0.199                  315             0.086         0.060          0.122
+any_toxic  wordcount (same language)   French           2491            0.605               438               0.578                  196             0.597         0.527          0.663
+any_toxic embeddings (same language)   French           2491            0.670               438               0.390                  196             0.347         0.284          0.416
+any_toxic     embeddings (all three)   French           2491            0.238               438               0.148                  196             0.102         0.067          0.152
+any_toxic  wordcount (same language)   Arabic           2365            0.363               960               0.391                  329             0.292         0.245          0.343
+any_toxic embeddings (same language)   Arabic           2365            0.125               960               0.171                  329             0.119         0.088          0.158
+any_toxic     embeddings (all three)   Arabic           2365            0.181               960               0.178                  329             0.122         0.091          0.161
+   severe  wordcount (same language)  English           2563            0.426              1165               0.377                  315             0.321         0.272          0.374
+   severe embeddings (same language)  English           2563            0.577              1165               0.477                  315             0.356         0.305          0.410
+   severe     embeddings (all three)  English           2563            0.494              1165               0.379                  315             0.203         0.162          0.251
+   severe  wordcount (same language)   French           2491            0.348               438               0.416                  196             0.398         0.332          0.468
+   severe embeddings (same language)   French           2491            0.690               438               0.756                  196             0.714         0.647          0.773
+   severe     embeddings (all three)   French           2491            0.468               438               0.361                  196             0.276         0.218          0.342
+   severe  wordcount (same language)   Arabic           2365            0.143               960               0.098                  329             0.073         0.050          0.106
+   severe embeddings (same language)   Arabic           2365            0.041               960               0.032                  329             0.003         0.001          0.017
+   severe     embeddings (all three)   Arabic           2365            0.355               960               0.293                  329             0.240         0.197          0.289
+
+Non-hateful statements that mention a group, flagged by group (task any_toxic, embeddings all three):
+language           group  statements  flagged   low  high
+ English    black people          45    0.067 0.023 0.179
+ English disabled people          45    0.000 0.000 0.079
+ English      gay people          45    0.089 0.035 0.207
+ English      immigrants          45    0.044 0.012 0.148
+ English         muslims          45    0.089 0.035 0.207
+ English    trans people          45    0.311 0.195 0.457
+ English           women          45    0.000 0.000 0.079
+  French    black people          32    0.094 0.032 0.242
+  French disabled people          25    0.000 0.000 0.133
+  French      gay people          24    0.083 0.023 0.258
+  French         muslims          29    0.034 0.006 0.172
+  French        refugees          22    0.000 0.000 0.149
+  French    trans people          31    0.452 0.292 0.622
+  French           women          33    0.000 0.000 0.104
+  Arabic    black people          46    0.087 0.034 0.203
+  Arabic disabled people          43    0.140 0.066 0.273
+  Arabic      gay people          48    0.125 0.059 0.247
+  Arabic      immigrants          49    0.000 0.000 0.073
+  Arabic            jews          48    0.167 0.087 0.296
+  Arabic    trans people          45    0.267 0.160 0.410
+  Arabic           women          50    0.080 0.032 0.188
+
+Non-hateful statements that mention a group, flagged by group (task severe, embeddings all three):
+language           group  statements  flagged   low  high
+ English    black people          45    0.156 0.077 0.288
+ English disabled people          45    0.022 0.004 0.116
+ English      gay people          45    0.311 0.195 0.457
+ English      immigrants          45    0.089 0.035 0.207
+ English         muslims          45    0.622 0.476 0.749
+ English    trans people          45    0.200 0.109 0.338
+ English           women          45    0.022 0.004 0.116
+  French    black people          32    0.250 0.133 0.421
+  French disabled people          25    0.080 0.022 0.250
+  French      gay people          24    0.458 0.279 0.649
+  French         muslims          29    0.724 0.543 0.853
+  French        refugees          22    0.045 0.008 0.218
+  French    trans people          31    0.355 0.211 0.531
+  French           women          33    0.000 0.000 0.104
+  Arabic    black people          46    0.239 0.139 0.379
+  Arabic disabled people          43    0.186 0.097 0.326
+  Arabic      gay people          48    0.125 0.059 0.247
+  Arabic      immigrants          49    0.041 0.011 0.137
+  Arabic            jews          48    0.854 0.728 0.928
+  Arabic    trans people          45    0.156 0.077 0.288
+  Arabic           women          50    0.080 0.032 0.188
+
+Saved docs/tool4_hatecheck_results.csv and docs/tool4_hatecheck_groups.csv

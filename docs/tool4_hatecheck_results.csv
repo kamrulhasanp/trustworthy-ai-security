@@ -1,0 +1,19 @@
+task,model,language,hateful_cases,hateful_flagged,nonhateful_cases,nonhateful_flagged,identity_statements,identity_flagged,identity_low,identity_high
+any_toxic,wordcount (same language),English,2563,0.861,1165,0.796,315,0.721,0.669,0.767
+any_toxic,embeddings (same language),English,2563,0.165,1165,0.178,315,0.098,0.07,0.136
+any_toxic,embeddings (all three),English,2563,0.284,1165,0.199,315,0.086,0.06,0.122
+any_toxic,wordcount (same language),French,2491,0.605,438,0.578,196,0.597,0.527,0.663
+any_toxic,embeddings (same language),French,2491,0.67,438,0.39,196,0.347,0.284,0.416
+any_toxic,embeddings (all three),French,2491,0.238,438,0.148,196,0.102,0.067,0.152
+any_toxic,wordcount (same language),Arabic,2365,0.363,960,0.391,329,0.292,0.245,0.343
+any_toxic,embeddings (same language),Arabic,2365,0.125,960,0.171,329,0.119,0.088,0.158
+any_toxic,embeddings (all three),Arabic,2365,0.181,960,0.178,329,0.122,0.091,0.161
+severe,wordcount (same language),English,2563,0.426,1165,0.377,315,0.321,0.272,0.374
+severe,embeddings (same language),English,2563,0.577,1165,0.477,315,0.356,0.305,0.41
+severe,embeddings (all three),English,2563,0.494,1165,0.379,315,0.203,0.162,0.251
+severe,wordcount (same language),French,2491,0.348,438,0.416,196,0.398,0.332,0.468
+severe,embeddings (same language),French,2491,0.69,438,0.756,196,0.714,0.647,0.773
+severe,embeddings (all three),French,2491,0.468,438,0.361,196,0.276,0.218,0.342
+severe,wordcount (same language),Arabic,2365,0.143,960,0.098,329,0.073,0.05,0.106
+severe,embeddings (same language),Arabic,2365,0.041,960,0.032,329,0.003,0.001,0.017
+severe,embeddings (all three),Arabic,2365,0.355,960,0.293,329,0.24,0.197,0.289
