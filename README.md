@@ -36,6 +36,19 @@ Traffic is grouped into 10-second windows. A model trained on the other four day
 Early detection works for floods and fails on quiet attacks. This is early detection, not prediction.
 Note: this dataset's timestamps use a 12-hour clock with no AM/PM. The script corrects this, and a check script (`check_timestamps.py`) is included.
 
+## Tool 4: Harmful content detector (English, French, Arabic)
+A simple detector that runs on a laptop CPU, tested on MLMA tweets and HateCheck test sentences.
+
+| Result | Number |
+|---|---|
+| AUC, word counts, same language (English / French / Arabic) | 0.60 / 0.72 / 0.78 |
+| AUC across languages, word counts | 0.38 to 0.57 (no skill) |
+| AUC across languages, multilingual embeddings | 0.55 to 0.64 (weak) |
+| Toxic Arabic tweets about women caught | 34.8% (others 89% to 92%) |
+| Harmless statements about Muslims flagged as severe | 62% English, 72% French (women: 2%, 0%) |
+
+Findings: the detector is weak, does not carry over between languages, misses some groups, and flags harmless statements about religious groups. Data: MLMA (MIT license) and HateCheck (CC BY 4.0). The data stays out of the repository.
+
 ### Adaptive early warning
 An analyst labels the day from the start until 15 minutes after the first attack begins. The model learns from that, and is tested only on what comes after.
 
