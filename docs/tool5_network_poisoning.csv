@@ -1,0 +1,6 @@
+flipped,recall,false_alarms,health_check_fires
+0% (clean),0.996,99,False
+5%,0.991,108,False
+10%,0.98,86,False
+20%,0.949,76,False
+40%,0.736,67,True

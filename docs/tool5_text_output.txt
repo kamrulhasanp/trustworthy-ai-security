@@ -1,0 +1,28 @@
+W1112 23:53:32.520000 52685 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 6750.13it/s]
+Share of toxic test tweets that were caught when clean AND are still caught after the spelling trick
+
+English (tweets caught when clean: word counts 844, embeddings 649)
+trick        delete   leet  repeat  space   swap  worst
+model                                                  
+embeddings    0.875  0.721   0.940  0.841  0.881  0.721
+word counts   0.951  0.883   0.969  0.943  0.963  0.883
+
+French (tweets caught when clean: word counts 508, embeddings 417)
+trick        delete   leet  repeat  space   swap  worst
+model                                                  
+embeddings    0.938  0.995   0.935  0.887  0.942  0.887
+word counts   0.943  0.880   0.967  0.945  0.937  0.880
+
+Arabic (tweets caught when clean: word counts 380, embeddings 346)
+trick        delete  repeat  space   swap  tatweel  worst
+model                                                    
+embeddings    0.922   0.939  0.913  0.945    0.934  0.913
+word counts   0.937   0.958  0.945  0.939    0.953  0.937
+
+Robustness score by model (lowest share still caught over all languages and tricks):
+model
+embeddings     0.721
+word counts    0.880
+
+Saved docs/tool5_text_results.csv and docs/tool5_text_chart.png

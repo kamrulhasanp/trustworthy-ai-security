@@ -1,0 +1,12 @@
+attack,strength,still_caught
+Random noise on every feature,5%,0.759
+Random noise on every feature,10%,0.651
+Random noise on every feature,20%,0.509
+Random noise on every feature,50%,0.309
+"Slow-down (timing x k, rates / k)",x2,0.975
+"Slow-down (timing x k, rates / k)",x5,0.954
+"Slow-down (timing x k, rates / k)",x10,0.89
+Padding (lengths and sizes grow),+10%,0.994
+Padding (lengths and sizes grow),+50%,0.905
+Padding (lengths and sizes grow),+100%,0.866
+"Change ONE top-10 feature (x0, x0.5, x2, x10)",best of 40 tries,0.923

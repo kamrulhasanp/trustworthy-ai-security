@@ -1,0 +1,38 @@
+Attack flows in the test data: 23388; caught by the clean model: 23300 (99.6%). Every result below is the share of these that are STILL caught.
+Features an attacker can slow down: 15 timing, 4 rate. Features padding changes: 17 length or size.
+
+A. Evasion: share of attack flows still caught
+                                       attack         strength  still_caught
+                Random noise on every feature               5%         0.759
+                Random noise on every feature              10%         0.651
+                Random noise on every feature              20%         0.509
+                Random noise on every feature              50%         0.309
+            Slow-down (timing x k, rates / k)               x2         0.975
+            Slow-down (timing x k, rates / k)               x5         0.954
+            Slow-down (timing x k, rates / k)              x10         0.890
+             Padding (lengths and sizes grow)             +10%         0.994
+             Padding (lengths and sizes grow)             +50%         0.905
+             Padding (lengths and sizes grow)            +100%         0.866
+Change ONE top-10 feature (x0, x0.5, x2, x10) best of 40 tries         0.923
+
+Single-feature evasion by day (share of flows hidden by changing one feature):
+  Wednesday: 9.5% of 891 flows
+  Thursday: 0.0% of 17 flows
+  Friday: 6.3% of 1092 flows
+Features that hide the most flows when changed alone:
+  min_seg_size_forward: 3.0%
+  Bwd Header Length: 2.5%
+  Average Packet Size: 2.3%
+  Bwd Packet Length Std: 2.1%
+  Max Packet Length: 2.0%
+
+B. Poisoning: share of attack labels flipped to normal in the training data
+   flipped  recall  false_alarms  health_check_fires
+0% (clean)   0.996            99               False
+        5%   0.991           108               False
+       10%   0.980            86               False
+       20%   0.949            76               False
+       40%   0.736            67                True
+
+Robustness score (lowest share still caught under attacker-controlled changes): 86.6%
+Saved docs/tool5_network_evasion.csv, tool5_network_poisoning.csv, tool5_network_chart.png

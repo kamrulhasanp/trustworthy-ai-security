@@ -1,0 +1,31 @@
+language,model,trick,tweets_caught_clean,still_caught,low,high
+English,word counts,swap,844,0.963,0.948,0.974
+English,embeddings,swap,649,0.881,0.854,0.904
+English,word counts,delete,844,0.951,0.935,0.964
+English,embeddings,delete,649,0.875,0.848,0.898
+English,word counts,space,844,0.943,0.925,0.957
+English,embeddings,space,649,0.841,0.811,0.867
+English,word counts,repeat,844,0.969,0.955,0.979
+English,embeddings,repeat,649,0.94,0.919,0.956
+English,word counts,leet,844,0.883,0.859,0.903
+English,embeddings,leet,649,0.721,0.685,0.754
+French,word counts,swap,508,0.937,0.912,0.955
+French,embeddings,swap,417,0.942,0.916,0.961
+French,word counts,delete,508,0.943,0.919,0.96
+French,embeddings,delete,417,0.938,0.91,0.957
+French,word counts,space,508,0.945,0.921,0.962
+French,embeddings,space,417,0.887,0.853,0.914
+French,word counts,repeat,508,0.967,0.947,0.979
+French,embeddings,repeat,417,0.935,0.907,0.955
+French,word counts,leet,508,0.88,0.849,0.905
+French,embeddings,leet,417,0.995,0.983,0.999
+Arabic,word counts,swap,380,0.939,0.911,0.959
+Arabic,embeddings,swap,346,0.945,0.916,0.965
+Arabic,word counts,delete,380,0.937,0.908,0.957
+Arabic,embeddings,delete,346,0.922,0.889,0.946
+Arabic,word counts,space,380,0.945,0.917,0.964
+Arabic,embeddings,space,346,0.913,0.879,0.939
+Arabic,word counts,repeat,380,0.958,0.933,0.974
+Arabic,embeddings,repeat,346,0.939,0.909,0.96
+Arabic,word counts,tatweel,380,0.953,0.926,0.97
+Arabic,embeddings,tatweel,346,0.934,0.902,0.955
