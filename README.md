@@ -49,6 +49,18 @@ A simple detector that runs on a laptop CPU, tested on MLMA tweets and HateCheck
 
 Findings: the detector is weak, does not carry over between languages, misses some groups, and flags harmless statements about religious groups. Data: MLMA (MIT license) and HateCheck (CC BY 4.0). The data stays out of the repository.
 
+## Tool 5: Attack test kit
+Simple, free tests of how well the earlier detectors hold up against evasion, poisoning, and spelling tricks. Runs on a laptop CPU.
+
+| Test | Result |
+|---|---|
+| Network detector, slow-down x10 / padding +100% / one-feature change | 89.0% / 86.6% / 92.3% of attack flows still caught |
+| Network detector, random noise 5% / 50% on every feature | 75.9% / 30.9% still caught |
+| Poisoning, 10% / 20% / 40% of attack labels flipped | recall 98.0% / 94.9% / 73.6% (the health level fires only at 40%) |
+| Text detectors, spelling tricks on 30% of words | word counts keep 88% to 97%, embeddings keep 72% to 99% |
+
+These are simple, untargeted attacks and not worst-case ones, so the robustness scores are not guarantees.
+
 ### Adaptive early warning
 An analyst labels the day from the start until 15 minutes after the first attack begins. The model learns from that, and is tested only on what comes after.
 
